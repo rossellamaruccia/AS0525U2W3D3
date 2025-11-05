@@ -1,0 +1,85 @@
+<!-- Devi realizzare una pagina per una “libreria” 
+ contenenente libri derivanti da una chiamata HTTP di tipo GET. 
+ Endpoint: https://striveschool-api.herokuapp.com/books 
+ Requisiti della pagina: 
+ ● Utilizza Bootstrap 5 per creare una pagina responsive 
+ con una sezione centrale a 3 o 4 colonne per riga 
+ ● Ogni colonna avrà al suo interno un elemento Card di Bootstrap, 
+ creata a partire da un singolo libro:               
+ nella “card image” inserisci la copertina del libro, 
+ nel “card body” il suo titolo e il suo prezzo. 
+ ● Sempre nel “card body” inserisci un pulsante “Scarta”. 
+ Se premuto, dovrà far scomparire la card dalla pagina. 
+ ● EXTRA: crea una lista che rappresenti il carrello del negozio 
+ e inseriscila dove vuoi nella pagina. 
+ Aggiungi un altro pulsante “Compra ora” vicino a “Scarta” nelle card 
+ per aggiungere il libro al carrello. 
+ Il carrello dovrà persistere nello storage del browser. 
+ ● EXTRA: aggiungi vicino ad ogni libro del carrello 
+ un pulsante per rimuoverlo dal carrello -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookstore</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <i class="bi bi-book me-3"></i>
+          <a class="navbar-brand" href="#">Bookstrap </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cart</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row row-cols-md-3 row-cols-lg-4" id="bookRow">
+          <!-- book cards here -->
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
